@@ -49,8 +49,8 @@ class ReponseVariableScraper:
             rank+=1
         tupls = list(zip(ranks, city, qol))
         df = pd.DataFrame(tupls, columns=headings)
-        cities = df["City"].map(lambda x: x.split(",")[0])
-        countries = df["City"].map(lambda x: x.split(",")[1])
+        cities = df["City"].map(lambda x: x.split(", ")[0])
+        countries = df["City"].map(lambda x: x.split(", ")[1])
         df["City"] = cities
         df["Country"] = countries
         self.data[self.year]=df
@@ -61,7 +61,7 @@ class ReponseVariableScraper:
 
 if __name__=="__main__":
     scraper=ReponseVariableScraper()
-    for year in range(2012,2020):
+    for year in range(2012,2021):
         scraper.scrape_year(year)
 
 

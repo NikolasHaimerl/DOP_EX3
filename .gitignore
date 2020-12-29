@@ -1,0 +1,6 @@
+
+data/
+
+.ipynb_checkpoints/
+
+src/data_preparation/__pycache__/

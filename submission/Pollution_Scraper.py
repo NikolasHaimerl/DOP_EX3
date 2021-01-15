@@ -11,7 +11,7 @@ class ReponseVariableScraper:
 
     def scrape_year(self,year,path=None):
         if year<2012 or year>2020: return
-        if not path: path = f"../../data/Pollution_{year}"
+        if not path: path = f"../data/Pollution_{year}"
         self.year = year
         self.url_base = f"https://www.numbeo.com/pollution/region_rankings.jsp?title={year}&region=150&displayColumn=0"
         if year==2012 or year ==2013:self.url_base = f"https://www.numbeo.com/pollution/region_rankings.jsp?title={year}-Q1&displayColumn=0&region=150"
